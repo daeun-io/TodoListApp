@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/todoFragment">
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.gmail.devleedaeun.todolistapp.ui.main.todo.TodoFragment"
+        android:label="todoFragment"
+        tools:layout="@layout/fragment_todo"/>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.gmail.devleedaeun.todolistapp.ui.main.category.CategoryFragment"
+        android:label="categoryFragment"
+        tools:layout="@layout/fragment_category"/>
+</navigation>
