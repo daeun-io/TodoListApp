@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TodoListApp</string>
+    <string name="title_activity_add_todo">AddTodoActivity</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="todo_list_all">ALL</string>
+    <string name="add_todo">NEW TODO</string>
+    <string name="category_list_all">ALL CATEGORIES</string>
+    <string name="category_menu">⋮</string>
+    <string name="user_login">USER LOGIN</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string-array name="storage">
+        <item name="android">My Android</item>
+        <item name="firebase">Firebase</item>
+    </string-array>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_auth_code_handler">AuthCodeHandlerActivity</string>
+</resources>

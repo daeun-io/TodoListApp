@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.main.MainActivity">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/todo_list_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageButton
+                android:id="@+id/todo_menu_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/outline_menu_32" />
+            <ImageButton
+                android:id="@+id/category_back_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/transparent"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/outline_arrow_back_ios_new_24" />
+            <TextView
+                android:id="@+id/todo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/todo_list_all"
+                android:textSize="20dp"
+                android:clickable="true"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/category_menu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="28dp"
+                android:layout_gravity="end"
+                android:text="@string/category_menu"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"
+                android:clickable="true" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/todo_list_ll"
+            app:layout_constraintStart_toStartOf="parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:navGraph="@navigation/main_nav_graph"
+            app:defaultNavHost="true" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/todo_add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:paddingBottom="16dp"
+        android:backgroundTint="@color/fab"
+        android:src="@drawable/outline_add_49"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:layout_gravity="end|bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_bnv"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/main_bnv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemIconSize="20dp"
+            android:background="#FFABAB"
+            app:labelVisibilityMode="labeled"
+            app:itemRippleColor="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
