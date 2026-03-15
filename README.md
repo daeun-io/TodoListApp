@@ -33,6 +33,6 @@ TodoListApp is a task management application that helps you organize your to-do 
     - Refactored ViewModels and Repository layers by merging two instances into one
     - Replaced data type from LiveData to StateFlow for immediate state updates
 
-## Current Issues
+## Issues & Challenges
 - The screen is not updated instantly when the user clicks the check box of a to-do in the Firebase Database. It requires an additional action, like clicking another button.
-- Can’t use access restriction, _request.auth != null_, in Firebase Database rules because Firebase Authentication is not used. For now, reading and writing are allowed to all.
+- Can’t use access restriction, _request.auth != null_, in Firebase Database rules because Firebase Authentication is not used. For now, reading and writing are allowed to all. ➡️ **register Kakao Native Key to Firebase Authentication’s OpenId Connect to allow authenticated users to access the Firebase Database.**
